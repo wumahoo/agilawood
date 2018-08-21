@@ -10,10 +10,10 @@
 
 namespace App\Controllers;
 
-use Swoft\Http\Server\Bean\Annotation\Controller;
-use Swoft\Http\Server\Bean\Annotation\RequestMapping;
 use Swoft\Http\Message\Server\Request;
 use Swoft\Http\Message\Server\Response;
+use Swoft\Http\Server\Bean\Annotation\Controller;
+use Swoft\Http\Server\Bean\Annotation\RequestMapping;
 
 /**
  * action demo
@@ -40,21 +40,21 @@ class RouteController
         $router = \bean('httpRouter');
 
         return [
-            'static' => $router->getStaticRoutes(),
+            'static'  => $router->getStaticRoutes(),
             'regular' => $router->getRegularRoutes(),
-            'vague' => $router->getVagueRoutes(),
-            'cached' => $router->getCacheRoutes(),
+            'vague'   => $router->getVagueRoutes(),
+            'cached'  => $router->getCacheRoutes(),
         ];
     }
-    
+
     /**
      * @RequestMapping(route="user/{uid}/book/{bid}/{bool}/{name}")
      *
-     * @param bool                $bool
-     * @param Request  $request
-     * @param int                 $bid
-     * @param string              $name
-     * @param int                 $uid
+     * @param bool $bool
+     * @param Request $request
+     * @param int $bid
+     * @param string $name
+     * @param int $uid
      * @param Response $response
      *
      * @return array
@@ -77,7 +77,7 @@ class RouteController
     /**
      * @RequestMapping(route="hasAnyArgs/{bid}")
      * @param Request $request
-     * @param int                $bid
+     * @param int $bid
      *
      * @return string
      */
@@ -90,7 +90,7 @@ class RouteController
      * @RequestMapping(route="hasMoreArgs")
      *
      * @param Request $request
-     * @param int                $bid
+     * @param int $bid
      *
      * @return array
      */
@@ -109,7 +109,7 @@ class RouteController
      */
     public function optionalParameter(string $name)
     {
-        return[$name];
+        return [$name];
     }
 
     /**

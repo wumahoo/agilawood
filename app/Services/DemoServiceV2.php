@@ -15,8 +15,8 @@ use Swoft\Bean\Annotation\Enum;
 use Swoft\Bean\Annotation\Floats;
 use Swoft\Bean\Annotation\Number;
 use Swoft\Bean\Annotation\Strings;
-use Swoft\Rpc\Server\Bean\Annotation\Service;
 use Swoft\Core\ResultInterface;
+use Swoft\Rpc\Server\Bean\Annotation\Service;
 
 /**
  * Demo service
@@ -44,11 +44,11 @@ class DemoServiceV2 implements DemoInterface
      * @Strings(name="name", min=2, max=5)
      * @Floats(name="price", min=1.2, max=1.9)
      *
-     * @param int    $type
-     * @param int    $uid
+     * @param int $type
+     * @param int $uid
      * @param string $name
-     * @param float  $price
-     * @param string $desc  default value
+     * @param float $price
+     * @param string $desc default value
      * @return array
      */
     public function getUserByCond(int $type, int $uid, string $name, float $price, string $desc = 'desc')

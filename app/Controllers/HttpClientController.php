@@ -10,8 +10,8 @@
 
 namespace App\Controllers;
 
-use Swoft\HttpClient\Client;
 use Swoft\Http\Server\Bean\Annotation\Controller;
+use Swoft\HttpClient\Client;
 
 /**
  * @Controller(prefix="/httpClient")

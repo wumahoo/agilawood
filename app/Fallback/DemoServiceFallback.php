@@ -11,8 +11,8 @@
 namespace App\Fallback;
 
 use App\Lib\DemoInterface;
-use Swoft\Sg\Bean\Annotation\Fallback;
 use Swoft\Core\ResultInterface;
+use Swoft\Sg\Bean\Annotation\Fallback;
 
 /**
  * Fallback demo

@@ -74,7 +74,7 @@ class RestController
      *
      * @RequestMapping(route="{userId}/book/{bookId}", method={RequestMethod::GET})
      *
-     * @param int    $userId
+     * @param int $userId
      * @param string $bookId
      *
      * @return array
@@ -105,16 +105,16 @@ class RestController
      *
      * @RequestMapping(route="{uid}", method={RequestMethod::PUT, RequestMethod::PATCH})
      *
-     * @param int     $uid
+     * @param int $uid
      * @param Request $request
      *
      * @return array
      */
     public function updateUser(Request $request, int $uid)
     {
-        $body           = $request->getBodyParams();
+        $body = $request->getBodyParams();
         $body['update'] = 'update';
-        $body['uid']    = $uid;
+        $body['uid'] = $uid;
 
         return $body;
     }

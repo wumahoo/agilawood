@@ -10,11 +10,11 @@
 
 namespace App\Models\Entity;
 
+use Swoft\Db\Bean\Annotation\Column;
+use Swoft\Db\Bean\Annotation\Entity;
 use Swoft\Db\Bean\Annotation\Id;
 use Swoft\Db\Bean\Annotation\Required;
 use Swoft\Db\Bean\Annotation\Table;
-use Swoft\Db\Bean\Annotation\Column;
-use Swoft\Db\Bean\Annotation\Entity;
 use Swoft\Db\Model;
 use Swoft\Db\Types;
 

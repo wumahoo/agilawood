@@ -10,11 +10,11 @@
 
 namespace App\Middlewares;
 
-use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Swoft\Core\RequestHandler;
+use Psr\Http\Server\RequestHandlerInterface;
 use Swoft\Bean\Annotation\Bean;
+use Swoft\Core\RequestHandler;
 use Swoft\Http\Message\Middleware\MiddlewareInterface;
 
 

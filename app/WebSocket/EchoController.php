@@ -11,6 +11,7 @@ use Swoole\WebSocket\Server;
 
 /**
  * Class EchoController
+ *
  * @package App\WebSocket
  * @WebSocket("/echo")
  */

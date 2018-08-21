@@ -42,7 +42,7 @@ class TestCommand
      * @Example
      * php swoft test:test arg=stelin -o opt
      *
-     * @param Input  $input
+     * @param Input $input
      * @param Output $output
      *
      * @Mapping("test2")
@@ -51,12 +51,12 @@ class TestCommand
     {
         App::error('this is eror');
         App::trace('this is trace');
-        Coroutine::create(function (){
+        Coroutine::create(function () {
             App::error('this is eror child');
             App::trace('this is trace child');
         });
 
-        var_dump('test', $input, $output, Coroutine::id(),Coroutine::tid());
+        var_dump('test', $input, $output, Coroutine::id(), Coroutine::tid());
     }
 
     /**
@@ -79,14 +79,14 @@ class TestCommand
     public function demo()
     {
         $hasOpt = input()->hasOpt('o');
-        $opt    = input()->getOpt('o');
-        $name   = input()->getArg('arg', 'swoft');
+        $opt = input()->getOpt('o');
+        $name = input()->getArg('arg', 'swoft');
 
         App::trace('this is command log');
         Log::info('this is comamnd info log');
         /* @var UserLogic $logic */
         $logic = App::getBean(UserLogic::class);
-        $data  = $logic->getUserInfo(['uid1']);
+        $data = $logic->getUserInfo(['uid1']);
         var_dump($hasOpt, $opt, $name, $data);
     }
 

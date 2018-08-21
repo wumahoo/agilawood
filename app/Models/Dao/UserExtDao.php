@@ -26,8 +26,8 @@ class UserExtDao
     public function getExtInfo()
     {
         return [
-            'age' => 18,
-            'desc' => 'hello',
+            'age'     => 18,
+            'desc'    => 'hello',
             'address' => 'chengdu'
         ];
     }

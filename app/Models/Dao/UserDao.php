@@ -26,7 +26,7 @@ class UserDao
     public function getUserInfo()
     {
         return [
-            'uid' => 666,
+            'uid'  => 666,
             'name' => 'stelin'
         ];
     }

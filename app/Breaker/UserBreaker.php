@@ -10,8 +10,8 @@
 
 namespace App\Breaker;
 
-use Swoft\Sg\Bean\Annotation\Breaker;
 use Swoft\Bean\Annotation\Value;
+use Swoft\Sg\Bean\Annotation\Breaker;
 use Swoft\Sg\Circuit\CircuitBreaker;
 
 /**

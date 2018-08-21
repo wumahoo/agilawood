@@ -10,15 +10,15 @@
 
 namespace App\Controllers;
 
-use Swoft\Http\Server\Bean\Annotation\Controller;
 use Swoft\Bean\Annotation\Enum;
 use Swoft\Bean\Annotation\Floats;
 use Swoft\Bean\Annotation\Integer;
 use Swoft\Bean\Annotation\Number;
-use Swoft\Http\Server\Bean\Annotation\RequestMapping;
 use Swoft\Bean\Annotation\Strings;
 use Swoft\Bean\Annotation\ValidatorFrom;
 use Swoft\Http\Message\Server\Request;
+use Swoft\Http\Server\Bean\Annotation\Controller;
+use Swoft\Http\Server\Bean\Annotation\RequestMapping;
 
 /**
  * @Controller("validator")
@@ -32,14 +32,14 @@ class ValidatorController
      * @Strings(from=ValidatorFrom::POST, name="name", min=3, max=10, default="girl")
      * @Strings(from=ValidatorFrom::PATH, name="name", min=3, max=10)
      *
-     * @param string  $name
+     * @param string $name
      * @param Request $request
      *
      * @return array
      */
     public function string(Request $request, string $name)
     {
-        $getName  = $request->query('name');
+        $getName = $request->query('name');
         $postName = $request->post('name');
 
         return [$getName, $postName, $name];
@@ -53,13 +53,13 @@ class ValidatorController
      * @Number(from=ValidatorFrom::PATH, name="id", min=5, max=10)
      *
      * @param Request $request
-     * @param int     $id
+     * @param int $id
      *
      * @return array
      */
     public function number(Request $request, int $id)
     {
-        $get  = $request->query('id');
+        $get = $request->query('id');
         $post = $request->post('id');
 
         return [$get, $post, $id];
@@ -73,13 +73,13 @@ class ValidatorController
      * @Integer(from=ValidatorFrom::PATH, name="id", min=5, max=10)
      *
      * @param Request $request
-     * @param int     $id
+     * @param int $id
      *
      * @return array
      */
     public function integer(Request $request, int $id)
     {
-        $get  = $request->query('id');
+        $get = $request->query('id');
         $post = $request->post('id');
 
         return [$get, $post, $id];
@@ -93,13 +93,13 @@ class ValidatorController
      * @Floats(from=ValidatorFrom::PATH, name="id", min=5.1, max=5.9)
      *
      * @param Request $request
-     * @param float   $id
+     * @param float $id
      *
      * @return array
      */
     public function float(Request $request, float $id)
     {
-        $get  = $request->query('id');
+        $get = $request->query('id');
         $post = $request->post('id');
 
         return [$get, $post, $id];
@@ -113,14 +113,14 @@ class ValidatorController
      * @Enum(from=ValidatorFrom::POST, name="name", values={1,"a",3}, default=1)
      * @Enum(from=ValidatorFrom::PATH, name="name", values={1,"a",3}, default=1)
      *
-     * @param string  $name
+     * @param string $name
      * @param Request $request
      *
      * @return array
      */
     public function estring(Request $request, $name)
     {
-        $getName  = $request->query('name');
+        $getName = $request->query('name');
         $postName = $request->post('name');
 
         return [$getName, $postName, $name];

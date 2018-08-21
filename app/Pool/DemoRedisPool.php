@@ -10,10 +10,10 @@
 
 namespace App\Pool;
 
+use App\Pool\Config\DemoRedisPoolConfig;
 use Swoft\Bean\Annotation\Inject;
 use Swoft\Bean\Annotation\Pool;
 use Swoft\Redis\Pool\RedisPool;
-use App\Pool\Config\DemoRedisPoolConfig;
 
 /**
  * DemoRedisPool

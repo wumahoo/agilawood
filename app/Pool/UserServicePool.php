@@ -10,9 +10,9 @@
 
 namespace App\Pool;
 
+use App\Pool\Config\UserPoolConfig;
 use Swoft\Bean\Annotation\Inject;
 use Swoft\Bean\Annotation\Pool;
-use App\Pool\Config\UserPoolConfig;
 use Swoft\Rpc\Client\Pool\ServicePool;
 
 /**

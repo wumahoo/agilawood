@@ -56,9 +56,9 @@ class RpcController
      */
     public function fallback()
     {
-        $result1  = $this->demoService->getUser('11');
-        $result2  = $this->demoService->getUsers(['1','2']);
-        $result3  = $this->demoService->getUserByCond(1, 2, 'boy', 1.6);
+        $result1 = $this->demoService->getUser('11');
+        $result2 = $this->demoService->getUsers(['1', '2']);
+        $result3 = $this->demoService->getUserByCond(1, 2, 'boy', 1.6);
 
         return [
             $result1,
@@ -72,9 +72,9 @@ class RpcController
      */
     public function deferFallback()
     {
-        $result1  = $this->demoService->deferGetUser('11')->getResult();
-        $result2  = $this->demoService->deferGetUsers(['1','2'])->getResult();
-        $result3  = $this->demoService->deferGetUserByCond(1, 2, 'boy', 1.6)->getResult();
+        $result1 = $this->demoService->deferGetUser('11')->getResult();
+        $result2 = $this->demoService->deferGetUsers(['1', '2'])->getResult();
+        $result3 = $this->demoService->deferGetUserByCond(1, 2, 'boy', 1.6)->getResult();
 
         return [
             'defer',
@@ -90,7 +90,7 @@ class RpcController
      */
     public function call()
     {
-        $version  = $this->demoService->getUser('11');
+        $version = $this->demoService->getUser('11');
         $version2 = $this->demoServiceV2->getUser('11');
 
         return [
@@ -102,7 +102,8 @@ class RpcController
     /**
      * Defer call
      */
-    public function defer(){
+    public function defer()
+    {
         $defer1 = $this->demoService->deferGetUser('123');
         $defer2 = $this->demoServiceV2->deferGetUsers(['2', '3']);
         $defer3 = $this->demoServiceV2->deferGetUserByCond(1, 2, 'boy', 1.6);

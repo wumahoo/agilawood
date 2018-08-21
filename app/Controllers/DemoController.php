@@ -12,15 +12,15 @@ namespace App\Controllers;
 
 use App\Models\Logic\IndexLogic;
 use Swoft\App;
-use Swoft\Core\Coroutine;
 use Swoft\Bean\Annotation\Inject;
+use Swoft\Core\Application;
+use Swoft\Core\Coroutine;
+use Swoft\Http\Message\Server\Request;
 use Swoft\Http\Server\Bean\Annotation\Controller;
 use Swoft\Http\Server\Bean\Annotation\RequestMapping;
 use Swoft\Http\Server\Bean\Annotation\RequestMethod;
-use Swoft\View\Bean\Annotation\View;
 use Swoft\Task\Task;
-use Swoft\Core\Application;
-use Swoft\Http\Message\Server\Request;
+use Swoft\View\Bean\Annotation\View;
 
 /**
  * 控制器demo
@@ -104,10 +104,10 @@ class DemoController
      */
     public function task()
     {
-        $result  = Task::deliver('test', 'corTask', ['params1', 'params2'], Task::TYPE_CO);
-        $mysql   = Task::deliver('test', 'testMysql', [], Task::TYPE_CO);
-        $http    = Task::deliver('test', 'testHttp', [], Task::TYPE_CO, 20);
-        $rpc     = Task::deliver('test', 'testRpc', [], Task::TYPE_CO, 5);
+        $result = Task::deliver('test', 'corTask', ['params1', 'params2'], Task::TYPE_CO);
+        $mysql = Task::deliver('test', 'testMysql', [], Task::TYPE_CO);
+        $http = Task::deliver('test', 'testHttp', [], Task::TYPE_CO, 20);
+        $rpc = Task::deliver('test', 'testRpc', [], Task::TYPE_CO, 5);
         $result1 = Task::deliver('test', 'asyncTask', [], Task::TYPE_ASYNC);
 
         return [$rpc, $http, $mysql, $result, $result1];
@@ -181,7 +181,7 @@ class DemoController
     public function layout()
     {
         $layout = 'layouts/default.php';
-        $data   = [
+        $data = [
             'name'       => 'Swoft',
             'repo'       => 'https://github.com/swoft-cloud/swoft',
             'doc'        => 'https://doc.swoft.org/',

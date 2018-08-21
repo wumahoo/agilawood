@@ -38,7 +38,7 @@ class OrmController
     public function findById()
     {
         $result = User::findById(41710)->getResult();
-        $query  = User::findById(41710);
+        $query = User::findById(41710);
 
         /* @var User $user */
         $user = $query->getResult(User::class);
@@ -46,23 +46,25 @@ class OrmController
         return [$result, $user->getName()];
     }
 
-    public function selectDb(){
+    public function selectDb()
+    {
         $data = [
-            'name' => 'name',
-            'sex'  => 1,
+            'name'        => 'name',
+            'sex'         => 1,
             'description' => 'this my desc',
-            'age'  => mt_rand(1, 100),
+            'age'         => mt_rand(1, 100),
         ];
         $result = Query::table(User::class)->selectDb('test2')->insert($data)->getResult();
         return $result;
     }
 
-    public function selectTable(){
+    public function selectTable()
+    {
         $data = [
-            'name' => 'name',
-            'sex'  => 1,
+            'name'        => 'name',
+            'sex'         => 1,
             'description' => 'this my desc',
-            'age'  => mt_rand(1, 100),
+            'age'         => mt_rand(1, 100),
         ];
         $result = Query::table('user2')->insert($data)->getResult();
         return $result;
@@ -204,7 +206,7 @@ class OrmController
     public function notGetResult()
     {
         $result = User::findById(19362);
-        $query  = User::findById(19362);
+        $query = User::findById(19362);
 
         /* @var User $user */
         $user = $query->getResult(User::class);
@@ -228,7 +230,7 @@ class OrmController
         $userId = $user->save()->getResult();
 
         $result = User::findById(19362);
-        $query  = User::findById(19362);
+        $query = User::findById(19362);
 
         /* @var User $user */
         $user = $query->getResult(User::class);
@@ -252,7 +254,7 @@ class OrmController
         $userId = $user->save();
 
         $result = User::findById(19362);
-        $query  = User::findById(19362);
+        $query = User::findById(19362);
 
         /* @var User $user */
         $user = $query->getResult(User::class);

@@ -10,8 +10,6 @@
 
 namespace App\Controllers\Admin;
 
-use App\Models\Entity\SupAdminUser;
-use App\Models\Entity\SupProduct;
 use App\Models\Logic\IndexLogic;
 use Swoft\App;
 use Swoft\Bean\Annotation\Inject;
@@ -107,10 +105,10 @@ class DemoController
      */
     public function task()
     {
-        $result  = Task::deliver('test', 'corTask', ['params1', 'params2'], Task::TYPE_CO);
-        $mysql   = Task::deliver('test', 'testMysql', [], Task::TYPE_CO);
-        $http    = Task::deliver('test', 'testHttp', [], Task::TYPE_CO, 20);
-        $rpc     = Task::deliver('test', 'testRpc', [], Task::TYPE_CO, 5);
+        $result = Task::deliver('test', 'corTask', ['params1', 'params2'], Task::TYPE_CO);
+        $mysql = Task::deliver('test', 'testMysql', [], Task::TYPE_CO);
+        $http = Task::deliver('test', 'testHttp', [], Task::TYPE_CO, 20);
+        $rpc = Task::deliver('test', 'testRpc', [], Task::TYPE_CO, 5);
         $result1 = Task::deliver('test', 'asyncTask', [], Task::TYPE_ASYNC);
 
         return [$rpc, $http, $mysql, $result, $result1];
@@ -186,7 +184,7 @@ class DemoController
     public function layout()
     {
         $layout = 'layouts/default.php';
-        $data   = [
+        $data = [
             'name'       => 'Swoft',
             'repo'       => 'https://github.com/swoft-cloud/swoft',
             'doc'        => 'https://doc.swoft.org/',

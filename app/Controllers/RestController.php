@@ -10,10 +10,10 @@
 
 namespace App\Controllers;
 
+use Swoft\Http\Message\Server\Request;
 use Swoft\Http\Server\Bean\Annotation\Controller;
 use Swoft\Http\Server\Bean\Annotation\RequestMapping;
 use Swoft\Http\Server\Bean\Annotation\RequestMethod;
-use Swoft\Http\Message\Server\Request;
 
 /**
  * RESTful和参数验证测试demo
@@ -75,7 +75,7 @@ class RestController
      *
      * @RequestMapping(route="{userId}/book/{bookId}", method={RequestMethod::GET})
      *
-     * @param int    $userId
+     * @param int $userId
      * @param string $bookId
      *
      * @return array

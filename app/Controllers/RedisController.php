@@ -43,7 +43,7 @@ class RedisController
     public function testDemoRedis()
     {
         $result = $this->demoRedis->set('name', 'swoft');
-        $name   = $this->demoRedis->get('name');
+        $name = $this->demoRedis->get('name');
 
         $this->demoRedis->incr('count');
         $this->demoRedis->incrBy('count2', 2);
@@ -54,7 +54,7 @@ class RedisController
     public function testCache()
     {
         $result = $this->cache->set('name', 'swoft');
-        $name   = $this->cache->get('name');
+        $name = $this->cache->get('name');
 
         $this->redis->incr('count');
 
@@ -66,7 +66,7 @@ class RedisController
     public function testRedis()
     {
         $result = $this->redis->set('nameRedis', 'swoft2');
-        $name   = $this->redis->get('nameRedis');
+        $name = $this->redis->get('nameRedis');
 
         return [$result, $name];
     }
@@ -74,7 +74,7 @@ class RedisController
     public function error()
     {
         $result = $this->redis->set('nameRedis', 'swoft2');
-        $name   = $this->redis->get('nameRedis');
+        $name = $this->redis->get('nameRedis');
         $ret1 = $this->redis->deferCall('set', ['name1', 'swoft1']);
         return [$name];
     }
@@ -100,7 +100,7 @@ class RedisController
     public function testFunc()
     {
         $result = cache()->set('nameFunc', 'swoft3');
-        $name   = cache()->get('nameFunc');
+        $name = cache()->get('nameFunc');
 
         return [$result, $name];
     }
@@ -108,8 +108,8 @@ class RedisController
     public function testFunc2()
     {
         $result = cache()->set('nameFunc2', 'swoft3');
-        $name   = cache('nameFunc2');
-        $name2   = cache('nameFunc3', 'value3');
+        $name = cache('nameFunc2');
+        $name2 = cache('nameFunc3', 'value3');
 
         return [$result, $name, $name2];
     }
@@ -117,7 +117,7 @@ class RedisController
     public function testDelete()
     {
         $result = $this->cache->set('name', 'swoft');
-        $del    = $this->cache->delete('name');
+        $del = $this->cache->delete('name');
 
         return [$result, $del];
     }
@@ -132,7 +132,7 @@ class RedisController
     public function setMultiple()
     {
         $result = $this->cache->setMultiple(['name6' => 'swoft6', 'name8' => 'swoft8']);
-        $ary    = $this->cache->getMultiple(['name6', 'name8']);
+        $ary = $this->cache->getMultiple(['name6', 'name8']);
 
         return [$result, $ary];
     }
@@ -140,7 +140,7 @@ class RedisController
     public function deleteMultiple()
     {
         $result = $this->cache->setMultiple(['name6' => 'swoft6', 'name8' => 'swoft8']);
-        $ary    = $this->cache->deleteMultiple(['name6', 'name8']);
+        $ary = $this->cache->deleteMultiple(['name6', 'name8']);
 
         return [$result, $ary];
     }
@@ -148,7 +148,7 @@ class RedisController
     public function has()
     {
         $result = $this->cache->set('name666', 'swoft666');
-        $ret    = $this->cache->has('name666');
+        $ret = $this->cache->has('name666');
 
         return [$result, $ret];
     }

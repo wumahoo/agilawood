@@ -25,7 +25,7 @@ class TaskController
      */
     public function co()
     {
-        $result  = Task::deliver('sync', 'deliverCo', ['p', 'p2'], Task::TYPE_CO);
+        $result = Task::deliver('sync', 'deliverCo', ['p', 'p2'], Task::TYPE_CO);
 
         return [$result];
     }
@@ -37,7 +37,7 @@ class TaskController
      */
     public function async()
     {
-        $result  = Task::deliver('sync', 'deliverAsync', ['p', 'p2'], Task::TYPE_ASYNC);
+        $result = Task::deliver('sync', 'deliverAsync', ['p', 'p2'], Task::TYPE_ASYNC);
 
         return [$result];
     }
@@ -49,7 +49,7 @@ class TaskController
      */
     public function cache()
     {
-        $result  = Task::deliver('sync', 'cache', [], Task::TYPE_CO);
+        $result = Task::deliver('sync', 'cache', [], Task::TYPE_CO);
 
         return [$result];
     }
@@ -61,7 +61,7 @@ class TaskController
      */
     public function mysql()
     {
-        $result  = Task::deliver('sync', 'mysql', [], Task::TYPE_CO);
+        $result = Task::deliver('sync', 'mysql', [], Task::TYPE_CO);
 
         return [$result];
     }
@@ -73,7 +73,7 @@ class TaskController
      */
     public function http()
     {
-        $result  = Task::deliver('sync', 'http', [], Task::TYPE_CO);
+        $result = Task::deliver('sync', 'http', [], Task::TYPE_CO);
 
         return [$result];
     }
@@ -85,7 +85,7 @@ class TaskController
      */
     public function rpc()
     {
-        $result  = Task::deliver('sync', 'rpc', [], Task::TYPE_CO);
+        $result = Task::deliver('sync', 'rpc', [], Task::TYPE_CO);
 
         return [$result];
     }
@@ -97,7 +97,7 @@ class TaskController
      */
     public function rpc2()
     {
-        $result  = Task::deliver('sync', 'rpc2', [], Task::TYPE_CO);
+        $result = Task::deliver('sync', 'rpc2', [], Task::TYPE_CO);
 
         return [$result];
     }

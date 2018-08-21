@@ -1,13 +1,13 @@
 <?php
+
 namespace App\Models\Entity;
 
-use Swoft\Db\Model;
 use Swoft\Db\Bean\Annotation\Column;
 use Swoft\Db\Bean\Annotation\Entity;
 use Swoft\Db\Bean\Annotation\Id;
 use Swoft\Db\Bean\Annotation\Required;
 use Swoft\Db\Bean\Annotation\Table;
-use Swoft\Db\Types;
+use Swoft\Db\Model;
 
 /**
  * 用户表实体
@@ -19,67 +19,67 @@ use Swoft\Db\Types;
 class SupAdminUser extends Model
 {
     /**
-     * @var string $accessToken 
+     * @var string $accessToken
      * @Column(name="access_token", type="string", length=255)
      * @Required()
      */
     private $accessToken;
 
     /**
-     * @var string $authKey 
+     * @var string $authKey
      * @Column(name="auth_key", type="string", length=32)
      * @Required()
      */
     private $authKey;
 
     /**
-     * @var int $createdAt 
+     * @var int $createdAt
      * @Column(name="created_at", type="integer")
      * @Required()
      */
     private $createdAt;
 
     /**
-     * @var string $email 
+     * @var string $email
      * @Column(name="email", type="string", length=255)
      * @Required()
      */
     private $email;
 
     /**
-     * @var int $id 
+     * @var int $id
      * @Id()
      * @Column(name="id", type="integer")
      */
     private $id;
 
     /**
-     * @var string $passwordHash 
+     * @var string $passwordHash
      * @Column(name="password_hash", type="string", length=255)
      * @Required()
      */
     private $passwordHash;
 
     /**
-     * @var string $passwordResetToken 
+     * @var string $passwordResetToken
      * @Column(name="password_reset_token", type="string", length=255)
      */
     private $passwordResetToken;
 
     /**
-     * @var string $realName 
+     * @var string $realName
      * @Column(name="real_name", type="string", length=24, default="")
      */
     private $realName;
 
     /**
-     * @var int $status 
+     * @var int $status
      * @Column(name="status", type="smallint", default=10)
      */
     private $status;
 
     /**
-     * @var int $updatedAt 
+     * @var int $updatedAt
      * @Column(name="updated_at", type="integer")
      * @Required()
      */
@@ -204,6 +204,7 @@ class SupAdminUser extends Model
 
     /**
      * 用户名
+     *
      * @param string $value
      * @return $this
      */
@@ -296,13 +297,13 @@ class SupAdminUser extends Model
 
     /**
      * 用户名
+     *
      * @return string
      */
     public function getUsername()
     {
         return $this->username;
     }
-
 
 
 }
