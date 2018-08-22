@@ -144,19 +144,19 @@ Options:
 > 是否同时启动RPC服务器取决于.env文件配置
 
 ```bash
-// 启动服务，根据 .env 配置决定是否是守护进程
+# 启动服务，根据 .env 配置决定是否是守护进程
 php bin/swoft start
 
-// 守护进程启动，覆盖 .env 守护进程(DAEMONIZE)的配置
+# 守护进程启动，覆盖 .env 守护进程(DAEMONIZE)的配置
 php bin/swoft start -d
 
-// 重启
+# 重启
 php bin/swoft restart
 
-// 重新加载
+# 重新加载
 php bin/swoft reload
 
-// 关闭服务
+# 关闭服务
 php bin/swoft stop
 ```
 
@@ -165,19 +165,19 @@ php bin/swoft stop
 启动WebSocket服务器,可选是否同时支持http处理
 
 ```bash
-// 启动服务，根据 .env 配置决定是否是守护进程
+# 启动服务，根据 .env 配置决定是否是守护进程
 php bin/swoft ws:start
 
-// 守护进程启动，覆盖 .env 守护进程(DAEMONIZE)的配置
+# 守护进程启动，覆盖 .env 守护进程(DAEMONIZE)的配置
 php bin/swoft ws:start -d
 
-// 重启
+# 重启
 php bin/swoft ws:restart
 
-// 重新加载
+# 重新加载
 php bin/swoft ws:reload
 
-// 关闭服务
+# 关闭服务
 php bin/swoft ws:stop
 ```
 
@@ -186,19 +186,19 @@ php bin/swoft ws:stop
 > 启动独立的RPC服务器
 
 ```bash
-// 启动服务，根据 .env 配置决定是否是守护进程
+# 启动服务，根据 .env 配置决定是否是守护进程
 php bin/swoft rpc:start
 
-// 守护进程启动，覆盖 .env 守护进程(DAEMONIZE)的配置
+# 守护进程启动，覆盖 .env 守护进程(DAEMONIZE)的配置
 php bin/swoft rpc:start -d
 
-// 重启
+# 重启
 php bin/swoft rpc:restart
 
-// 重新加载
+# 重新加载
 php bin/swoft rpc:reload
 
-// 关闭服务
+# 关闭服务
 php bin/swoft rpc:stop
 
 ```
